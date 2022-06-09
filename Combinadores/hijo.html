@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./descendientes.css">
+</head>
+<body>
+    <h1>Hijo</h1>
+        <textarea onkeyup="codigoHTML();" name="" id="textoHijo" cols="30" rows="10" >
+       
+       <style> 
+            div > p { color:red; } 
+        </style>
+        <article>
+            <p>parrafo</p>
+        </article>
+        <article>
+            <p>parrafo</p>
+        </article>
+        <section>
+            <div>
+                <p> parrafo<p> 
+           </div>  
+        </section>      
+        <p> parrafo<p>       
+       
+    </textarea>
+</div>
+
+     
+    <div id="resultadoHijo"></div>
+
+    
+
+</body>
+<script>
+    function codigoHTML() {
+        //hijo
+        divHijo = document.getElementById("resultadoHijo");
+        textoBaseHijo = "<div> <p> parrafo<p> </div>  <style> p{ color:red; } </style>";
+        textoHijo = textoHijo = '' ? textoBaseHijo : document.getElementById("textoHijo").value ;        
+        divHijo.innerHTML = textoHijo;      
+    }
+
+
+    //funcion que se ejecuta al empezar la pagina
+    window.onload = function() {
+        codigoHTML();
+    }
+
+
+</script>
+</html>

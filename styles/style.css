@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100% ;
+    border: 10px solid black;
+}
+
+li{
+    list-style: none;
+}
+
+.video{
+    width: 100%;
+    margin-left: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    font-size: 12px;
+}
+
+h3{
+    color: red;
+}
+
+.articulo .parrafo{
+    color: red;
+}
+
+textarea{
+    width: 40rem;
+    border: 1px solid black;
+    height: 200px;
+}
+video{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./descendientes.css">
+</head>
+<body>
+    
+    <h1>Descendiente</h1>
+    <textarea onkeyup="codigoHTML();" name="" id="textoDescendiente" cols="30" rows="10">
+       
+        <style> 
+            div  p { color:blue; } 
+        </style>
+
+        <article>
+            <p>parrafo</p>
+        </article>
+        <article>
+            <p>parrafo</p>
+        </article>
+        <section>
+            <div>
+                <p> parrafo<p> 
+           </div>  
+        </section>      
+        <p> parrafo<p>   
+    </textarea>
+    <div id="resultadoDescendiente"></div>
+
+</body>
+<script>
+    function codigoHTML() {        
+        //descendiente
+        divDescendiente = document.getElementById("resultadoDescendiente");
+        textoBaseDescendiente = "<div> <p> parrafo<p> </div>  <style> p{ color:blue; } </style>";
+        textoDescendiente = textoDescendiente = '' ? textoBaseDescendiente : document.getElementById("textoDescendiente").value ;
+        divDescendiente.innerHTML = textoDescendiente;
+    }
+
+
+    //funcion que se ejecuta al empezar la pagina
+    window.onload = function() {
+        codigoHTML();
+    }
+
+</script>
+</html>

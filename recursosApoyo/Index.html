@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <ol>
+            <li>                   
+                <figure>
+                    <img src="https://tinypng.com/images/image-resizing-thumb.png"/>
+                    <figcaption>Reduce peso imagenes</figcaption>
+                </figure>
+                <a href="https://tinypng.com/" >Tiny Png</a>            
+            </li>
+            <li>
+                <a href="https://www.verexif.com/" >Ver Exif</a>
+                <img src="" alt="Elimina metadato de imagenes"/>
+            </li>      
+            <li>
+                <a href="https://coverr.co/es">Recurso de video</a>
+            </li>     
+            <li>
+                <video src="./Video/videoTest.mp4#t=10,12" controls preload="auto" class="video">
+                    <source src="./Video/videoTest.mp4#t=10,12">
+                    <source src="./Video/videoTest.m4v#t=10,12">
+                    <!-- <source src="./Video/videoTest.m4v#t=10,12"> -->
+                    <!-- <source src="./Video/videoTest.m4v#t=10,12"> -->
+                    preload="auto" permite que se descargue el video desde antes de reproducirlo para ahorrar tiempo en el renderizado.
+                    separar el src en una etiqueta source nos ayudara en caso de que el navegador tenga problemas cargando cierto tipo de formatos.
+                </video>
+            </li>
+            <li></li>
+            <li></li>    
+        </ol>
+
+        <main>
+            <article class="articulo">
+                <h2>Herencia</h2>
+                <p>las etiquetas "hijo" heredan de las etiquetas que las contienen.</p>
+                <p>Si la etiqueta p (parrafo) esta contenida en una  etiqueta article que tiene un estilo </p>
+                 <p class="parrafo">font-size: 40px;</p> 
+                 <p>el contenido de p heredará este estilo </p>
+            </article>           
+        </main>
+
+
+        <section>
+            <textarea>
+                <a>
+                *{
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .contenedor{
+                    width: 100% ;
+                    border: 10px solid black;
+                }
+            </textarea>
+        </section>
+
+    </div>
+
+   
+
+</body>
+</html>

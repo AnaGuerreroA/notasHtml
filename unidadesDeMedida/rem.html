@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad de medida Rem</title>
+    <link rel="stylesheet" href="./../styles/estiloIFrame.css">
+</head>
+<body>
+    
+<content class="contenedorIFrame">
+    <h1>Unidad de medida Rem.</h1>
+</content>
+
+    <textarea onkeyup="codigoHTML();" id="textoRem" >
+
+    </textarea>
+    <div id="resultadoRem"></div>
+</body>
+
+<script>
+    function codigoHTML() {     
+        divRem = document.getElementById("resultadoRem");
+        textoBaseRem = "<div> <p> parrafo<p> </div>  <style> p{ color:blue; } </style>";
+        textoRem = textoRem = '' ? textoBaseRem : document.getElementById("textoRem").value ;
+        divRem.innerHTML = textoRem;
+    }
+
+
+    //funcion que se ejecuta al empezar la pagina
+    window.onload = function() {
+        codigoHTML();
+    }
+
+</script>
+
+</html>

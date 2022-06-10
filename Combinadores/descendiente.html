@@ -5,32 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./descendientes.css">
+    <link rel="stylesheet" href="./../styles/estiloIFrame.css">
 </head>
 <body>
-    <content>
-      <h1>Descendiente</h1>
-        <textarea onkeyup="codigoHTML();" name="" id="textoDescendiente" cols="30" rows="10">
-        
-            <style> 
-                div  p { color:blue; } 
-            </style>
+    <div class="contenedorIFrame">
+        <content>
+        <h1>Descendiente</h1>
+            <textarea onkeyup="codigoHTML();" name="" id="textoDescendiente" cols="30" rows="10">
+            
+                <style> 
+                    div  p { color:blue; } 
+                </style>
 
-            <article>
-                <p>parrafo</p>
-            </article>
-            <article>
-                <p>parrafo</p>
-            </article>
-            <section>
-            <div>
-                <p> parrafo<p> 
-            </div>  
-            </section>      
-                <p> parrafo<p>   
-        </textarea>
+                <article>
+                    <p>parrafo</p>
+                </article>
+                <article>
+                    <p>parrafo</p>
+                </article>
+                <section>
+                <div>
+                    <p> parrafo<p> 
+                </div>  
+                </section>      
+                    <p> parrafo<p>   
+            </textarea>      
+        </content>
         <div id="resultadoDescendiente"></div>
-    </content>
+    </div>
 </body>
 <script>
     function codigoHTML() {        

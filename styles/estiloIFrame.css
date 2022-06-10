@@ -4,8 +4,8 @@
     padding: 0;
 }
 textarea{
-  width: 40%;
-  height: 18rem;
+  width: 100%;
+  height: 17rem;
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -13,7 +13,8 @@ textarea{
   background-color: #f8f8f8;
   font-size: 12px;
   resize: none;
- 
+  display: flex;
+  flex-direction: column;
 }
 
 iframe{
@@ -22,11 +23,17 @@ iframe{
     height: 23rem;
 }
 
-content{
+.contenedorIFrame{
   display: flex;
   flex-direction: row;
 }
 
+content{
+  box-sizing: content-box;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
 content div{
   width: 40%;
 }

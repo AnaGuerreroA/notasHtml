@@ -11,10 +11,68 @@
 </head>
 
 <body>
-    <div>
-        <iframe src="./Combinadores/hijo.html" scrolling="no"></iframe>
-        <iframe src="./Combinadores/descendiente.html" scrolling="no"></iframe>
-        <iframe src="./unidadesDeMedida/rem.html" scrolling="no"></iframe>
-    </div>
-</body>
 
+   
+    <button class="collapsible">(Clase 32) Combinadores.</button>
+    <div class="content">
+        <p>El combinador hijo(child) afectará a los componentes que sean hijos directos del elemento seleccionado.</p>
+        <p>Ej: seleciona parrafos(p) que son hijos directos(no hay otras etiquetas de por medio) del elemento div </p>
+        <h1>div > p {</h1>
+        <iframe src="./Pages/Combinadores/hijo.html" scrolling="no"></iframe>
+
+        <p>El combinador de descendiente afectará a todos los componentes que sean descendientes del elemento seleccionado, sin importar si hay otras etiquetas de por medio</p>
+        <p>Ej: seleciona todos los parrafos(p) que son hijos directos(no hay otras etiquetas de por medio) del elemento div </p>
+        <h1>div p {</h1>
+        <iframe src="./Pages/Combinadores/descendiente.html" scrolling="no"></iframe>
+    </div>   
+
+    <button class="collapsible">(Clase 35) Unidad de medida Rem</button>
+    <div class="content">
+        <iframe src="./Pages/unidadesDeMedida/rem.html" scrolling="no"></iframe>
+    </div>    
+       
+    <button class="collapsible">(Clase 44)Responsive design: media queries</button>
+    <div class="content">
+        <ul>
+            <li> Deberiamos diseñar pensando en mobile first o mobile only
+              <ul>
+                <li>Esto lo conseguimos con media querys en css</li>
+                <li>@media(min-width: 480px){...}</li>
+                <li>@media(min-width: 768px){...}</li>
+                <li>@media(min-width: 1024px){...}</li>
+              </ul>
+             </li>
+             <li>
+               <p>La mejor forma de implementarlo es tener distintas hojas de estilo para cada medida y llamarlas en el head</p>
+               <textarea><link href="tablet.css" rel="stylesheet" media="screen and (min-width: 768px)"> </textarea>
+            </li>
+            
+        </ul>
+    </div>  
+
+    <button class="collapsible">(Clase 45) Estrategias de responsive</button>    
+    <div class="content">
+        <p>Mostly fluid: casi todo se reajusta al cambiar tamaño de pantallas</p>
+        <iframe src="./Pages/EstrategiasResponsive/mostlyFluid/mostlyFluid.html" ></iframe>
+        <p>Layout Shifter: la estructura de los componentes cambia al reajustar el tamaño de pantallas, dando la impresion de que es un diseño distinto</p>
+        <iframe src="./Pages/EstrategiasResponsive/layoutShifter/index.html" ></iframe>
+        <p>Column Drop: los elementos de una columna iran subiendo a medida de que la pantalla vaya creciendo</p>
+        <iframe src="./Pages/EstrategiasResponsive/layoutShifter/index.html" ></iframe>
+    </div>    
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./../styles/estiloIFrame.css">
+    <link rel="stylesheet" href="./../../styles/estiloIFrame.css">
 </head>
 <body>
     <div class="contenedorIFrame">
@@ -18,19 +18,22 @@
                         } 
                     </style>
                     
-                    <article>
-                        <p>parrafo</p>
-                    </article>
-                    <article>
-                        <p>parrafo</p>
-                    </article>
-                    <section>
-                        <div>
-                            <p>parrafo<p> 
-                        </div>  
-                    </section>      
-                    <p>parrafo<p>               
+<div>
+    <article>
+        <p>parrafo</p>
+    </article>
+    <article>
+        <p>parrafo</p>
+    </article>
+    <section>
+    <div>
+        <p>parrafo<p> 
+    </div>  
+    </section>      
+    <p>parrafo<p>     
+</div>          
                 </textarea>
+                
             </content>
     <div id="resultadoHijo"></div>
     </div>
@@ -38,9 +41,8 @@
 <script>
     function codigoHTML() {
         //hijo
-        divHijo = document.getElementById("resultadoHijo");
-        textoBaseHijo = "<div> <p> parrafo<p> </div>  <style> p{ color:red; } </style>";
-        textoHijo = textoHijo = '' ? textoBaseHijo : document.getElementById("textoHijo").value ;        
+        divHijo = document.getElementById("resultadoHijo");      
+        textoHijo = textoHijo = document.getElementById("textoHijo").value ;        
         divHijo.innerHTML = textoHijo;      
     }
 

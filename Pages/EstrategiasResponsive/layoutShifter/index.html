@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    
+        <content>
+            <h1>Layout Shifter</h1>
+                <textarea onkeyup="codigoHTML();" name="" id="texto" cols="30" rows="18">            
+    <style> 
+        @media (min-width: 600px) {
+        .c1 {
+        width: 25%;
+        }
+        .c4 {
+        width: 75%;
+        }
+        .c5 {
+        width: 100%;
+        }
+    }
+    @media (min-width: 800px) {
+        .container {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .c1 {
+        width: 50%;
+        order: 1;
+        }
+        .c4 {
+        width: 100%;
+        }
+        .c5 {
+        width: 50%;
+        order: 2;
+        }
+    }
+    </style>
+
+        <main class="container">
+            <div class="c1"></div>
+            <div class="c4">
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+            <div class="c5"></div>
+        </main>
+        </textarea>
+        <div id="resultado"></div>
+      </content>
+     
+
+</body>
+<script>
+    function codigoHTML() {                
+        div = document.getElementById("resultado");       
+        texto = document.getElementById("texto").value ;
+        div.innerHTML = texto;
+    }
+    //funcion que se ejecuta al empezar la pagina
+    window.onload = function() {
+        codigoHTML();
+    }
+</script>
+</html>

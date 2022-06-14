@@ -6,49 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./../../styles/estiloIFrame.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 </head>
 <body>
-    <div class="contenedorIFrame">
-        <content>
-        <h1>Descendiente</h1>
-            <textarea onkeyup="codigoHTML();" name="" id="textoDescendiente" cols="30" rows="18">            
-                <style> 
-                    div  p { 
-                        color:blue; 
-                    } 
-                </style>
+<content>
+    <style>
+          div  p { 
+                color:blue; 
+            }
+    </style>
+    <pre>
+        <code>
+            &lt;style&gt; 
+                div  p { 
+                    color:blue; 
+                } 
+            &lt;/style&gt;
 
-                <article>
-                    <p>parrafo</p>
-                </article>
-                <article>
-                    <p>parrafo</p>
-                </article>
-                <section>
-                <div>
-                    <p>parrafo<p> 
-                </div>  
-                </section>      
-                    <p>parrafo<p>   
-            </textarea>      
-        </content>
-        <div id="resultadoDescendiente"></div>
+            &lt;article&gt;
+                &lt;p&gt;parrafo&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;article&gt;
+                &lt;p&gt;parrafo&lt;/p&gt;
+            &lt;/article&gt;
+            &lt;section&gt;
+            &lt;div&gt;
+                &lt;p&gt;parrafo&lt;p&gt; 
+            &lt;/div&gt;  
+            &lt;/section&gt;      
+                &lt;p&gt;parrafo&lt;p&gt;   
+        </code>
+    </pre>
+    <div>
+        <article>
+            <p>parrafo</p>
+        </article>
+        <article>
+            <p>parrafo</p>
+        </article>
+        <section>
+            <div>
+                <p>parrafo<p> 
+            </div>  
+        </section>      
+        <p>parrafo<p>   
     </div>
+</content>
 </body>
-<script>
-    function codigoHTML() {        
-        //descendiente
-        divDescendiente = document.getElementById("resultadoDescendiente");
-        textoBaseDescendiente = "<div> <p> parrafo<p> </div>  <style> p{ color:blue; } </style>";
-        textoDescendiente = textoDescendiente = '' ? textoBaseDescendiente : document.getElementById("textoDescendiente").value ;
-        divDescendiente.innerHTML = textoDescendiente;
-    }
 
-
-    //funcion que se ejecuta al empezar la pagina
-    window.onload = function() {
-        codigoHTML();
-    }
-
-</script>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>

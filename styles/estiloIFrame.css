@@ -30,9 +30,12 @@ iframe{
 
 content{
   box-sizing: content-box;
-  width: 50rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+code{
+  width: auto;
 }
 content div{
   width: 40%;

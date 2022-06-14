@@ -6,52 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./../../styles/estiloIFrame.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 </head>
 <body>
     <div class="contenedorIFrame">
         <content>
             <h1>Hijo</h1>
-                <textarea onkeyup="codigoHTML();" name="" id="textoHijo" cols="30" rows="18" >        
-                    <style> 
-                        div > p { 
-                            color:red; 
-                        } 
-                    </style>
-                    
-<div>
-    <article>
-        <p>parrafo</p>
-    </article>
-    <article>
-        <p>parrafo</p>
-    </article>
-    <section>
-    <div>
-        <p>parrafo<p> 
-    </div>  
-    </section>      
-    <p>parrafo<p>     
-</div>          
-                </textarea>
-                
-            </content>
-    <div id="resultadoHijo"></div>
+
+<pre>
+    <code>
+        &lt;style&gt; 
+        div &gt; p { 
+            color:red; 
+        } 
+    &lt;/style&gt;
+    
+&lt;div&gt;
+&lt;article&gt;
+&lt;p&gt;parrafo&lt;/p&gt;
+&lt;/article&gt;
+&lt;article&gt;
+&lt;p&gt;parrafo&lt;/p&gt;
+&lt;/article&gt;
+&lt;section&gt;
+&lt;div&gt;
+&lt;p&gt;parrafo&lt;p&gt; 
+&lt;/div&gt;  
+&lt;/section&gt;      
+&lt;p&gt;parrafo&lt;p&gt;     
+&lt;/div&gt;          
+    </code>
+</pre>
+            <div>
+                <article>
+                    <p>parrafo</p>
+                </article>
+                <article>
+                    <p>parrafo</p>
+                </article>
+                <section>
+                <div>
+                    <p>parrafo<p> 
+                </div>  
+                </section>      
+                <p>parrafo<p>     
+            </div>          
+
+        </content>
     </div>
+
 </body>
-<script>
-    function codigoHTML() {
-        //hijo
-        divHijo = document.getElementById("resultadoHijo");      
-        textoHijo = textoHijo = document.getElementById("textoHijo").value ;        
-        divHijo.innerHTML = textoHijo;      
-    }
-
-
-    //funcion que se ejecuta al empezar la pagina
-    window.onload = function() {
-        codigoHTML();
-    }
-
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </html>
